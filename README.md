@@ -8,8 +8,6 @@ You will be completing two sets of instructions to build out the UI and correspo
 
 ## Building out the UI
 
-------------
-
 #### Details
 - Use the JPG or Sketch file contained in this repository as your visual guide. If you'd like, you can download a trial of Sketch here: https://www.sketchapp.com/
 - You must consume the API endpoint you create in the API instructions (below). For example, you may construct your API to live at: `/api/users`. How you consume the endpoint is up to you.
@@ -32,8 +30,6 @@ You will be completing two sets of instructions to build out the UI and correspo
 - Use a Gravatar for displaying a user's avatar based on the user's email
 
 ## Building out the API
-
-------------
 
 **Goal:** Use an open-source ORM / database wrapper to store and return team members that match the schema below via a new Express.js route:
 ```
@@ -81,8 +77,6 @@ You will be completing two sets of instructions to build out the UI and correspo
 #### For fun / if you want to get crazy
 - Handle filtering results on the service-side (instead of on the client side)
 - Add endpoints for handling adding, editing and deleting users
-
-------------
 
 ## To submit
 - Send Josh (josh@lennd.com) an email with a link to your repository
