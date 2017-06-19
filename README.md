@@ -4,7 +4,7 @@
 
 You will be completing two sets of instructions to build out the UI and corresponding API for a "Team Members" page.
 
-![alt text](https://raw.githubusercontent.com/lennd/full-stack-engineer-exercise/master/excercise-design.png "Exercise")
+![alt text](https://github.com/lennd/full-stack-engineer-exercise/raw/master/excercise-design.png "Exercise")
 
 ## Building out the UI
 
