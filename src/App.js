@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header';
+import Search from './Search';
 import EventTeam from './EventTeam';
 
 export class App extends Component {
@@ -7,6 +8,7 @@ export class App extends Component {
     return (
       <div>
         <Header />
+        <Search />
         <EventTeam />
       </div>
     );

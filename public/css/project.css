@@ -4,11 +4,40 @@ html {
 
 body {
   margin: 0;
+  background: #f1f1f1;
 }
 
-h2 {
+.header {
   background: linear-gradient(to right, purple, indigo);
   color: white;
   margin: 0 0;
   padding: 50px 25px;
+}
+
+.searchRow {
+  background: #f2f2f2;
+  margin: 0 50px 0 50px;
+  border-width: 0 0.5px 0.5px 0.5px;
+  border-style: solid;
+  border-color: #d1d1d1;
+  display: flex;
+  flex-direction: row;
+  box-shadow: -1px 1px 1px grey;
+}
+
+.search {
+  padding: 10px 30px 10px 30px;
+  width: 50%;
+  display: flex;
+}
+
+input {
+  width: 50%;
+}
+
+.peopleCount {
+  text-align: right;
+  padding: 20px 30px 20px 30px;
+  width: 50%;
+  font-weight: bold;
 }
