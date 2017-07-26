@@ -56,5 +56,5 @@ userData.forEach(item => {
         });
       });
     })
-    .catch(err => console.error('failed to insert data'));
+    .catch(err => console.error(err));
 });

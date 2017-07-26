@@ -1,11 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
   const Geo = sequelize.define('geo', {
-    // id: {
-    //   type: DataTypes.UUID,
-    //   primaryKey: true,
-    //   defaultValue: DataTypes.UUIDV4,
-    //   allowNull: false
-    // },
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
