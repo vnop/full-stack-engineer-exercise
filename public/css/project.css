@@ -1,5 +1,5 @@
 html {
-  font-family: sans-serif;
+  font-family: Helvetica Neue, Helvetica, arial, sans-serif;
 }
 
 body {
@@ -8,14 +8,14 @@ body {
 }
 
 .header {
-  background: linear-gradient(to right, purple, indigo);
+  background: linear-gradient(to right, #aa00ee, #6600de);
   color: white;
   margin: 0 0;
   padding: 50px 25px;
 }
 
 .searchRow {
-  background: #f2f2f2;
+  background: #fafafa;
   margin: 0 50px 0 50px;
   border-width: 0 0.5px 0.5px 0.5px;
   border-style: solid;
@@ -43,7 +43,7 @@ input {
 }
 
 .eventTeam {
-  background: #f9f9f9;
+  background: #f7f7f7;
   margin: 0 50px 100px 50px;
   border-width: 0 0.5px 0.5px 0.5px;
   border-style: solid;
@@ -54,7 +54,7 @@ input {
 }
 
 .eventMember {
-  background: #f2f2f2;
+  background: #ffffff;
   margin: 0 0;
   border-width: 0 0.5px 0.5px 0px;
   border-style: solid;
@@ -97,14 +97,20 @@ input {
 
 .memberType {
   align-items: right;
+  color: #c5c5c5;
 }
+
+.email {
+  color: #c9c9c9;
+}
+
 .fa-chevron-right {
-  color: turquoise;
+  color: #00dd93;
   text-align: right;
 }
 
 .fa-chevron-down {
-  color: turquoise;
+  color: #00dd93;
   text-align: right;
 }
 

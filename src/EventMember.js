@@ -10,6 +10,8 @@ const EventMember = props =>
         <strong>
           {props.member.name}
         </strong>
+      </div>
+      <div className="email">
         {props.member.email}
       </div>
     </div>
@@ -18,6 +20,7 @@ const EventMember = props =>
 
     {
       //onClick event show address here
+      // color #F8F8F8
     }
   </div>;
 
