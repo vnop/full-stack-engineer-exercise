@@ -41,3 +41,74 @@ input {
   width: 50%;
   font-weight: bold;
 }
+
+.eventTeam {
+  background: #f9f9f9;
+  margin: 0 50px 100px 50px;
+  border-width: 0 0.5px 0.5px 0.5px;
+  border-style: solid;
+  border-color: #d1d1d1;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -1px 1px 1px grey;
+}
+
+.eventMember {
+  background: #f2f2f2;
+  margin: 0 0;
+  border-width: 0 0.5px 0.5px 0px;
+  border-style: solid;
+  border-color: #d1d1d1;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0px 1px 1px grey;
+}
+
+.memberName {
+  padding: 10px 30px 10px 30px;
+  width: 45%;
+  display: flex;
+}
+
+.memberGravatar {
+  width: 50px;
+  height: 50px;
+  border-width: 1px 1px;
+  border-radius: 15%;
+  border-style: solid;
+  border-color: black;
+}
+
+/*.memberArrow {
+  text-align: right;
+  width: 50%;
+  padding: 20px 30px 20px 30px;
+  display: flex;
+}*/
+
+.member {
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.memberType {
+  align-items: right;
+}
+.fa-chevron-right {
+  color: turquoise;
+  text-align: right;
+}
+
+.fa-chevron-down {
+  color: turquoise;
+  text-align: right;
+}
+
+.spinner {
+  text-align: center;
+  margin: 10px 10px;
+}
