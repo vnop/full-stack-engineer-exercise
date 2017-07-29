@@ -10,28 +10,29 @@ const searchName = (state = '', action) => {
   }
 };
 
-const apiData = (state = [], action) => {
+const apiData = (state = { loaded: false, data: [] }, action) => {
   switch (action.type) {
     case ADD_API_DATA:
-      return action.payload;
+      return { ...state, loaded: true, data: action.payload };
+      break;
     default:
       return state;
   }
-}
+};
 
-const selectedMember = (state = {}, action) => {
+const selectedMember = (state = { showMember: null }, action) => {
   switch (action.type) {
     case SET_SELECTED_MEMBER:
-      return { ...state, action.payload };
+      return { ...state, showMember: action.payload };
     default:
       return state;
   }
 };
 
 const rootReducer = combineReducers({
-  SET_SEARCH_NAME,
-  ADD_API_DATA,
-  SET_SELECTED_MEMBER
+  searchName,
+  apiData,
+  selectedMember
 });
 
 export default rootReducer;

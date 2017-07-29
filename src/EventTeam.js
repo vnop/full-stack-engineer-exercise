@@ -1,31 +1,36 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+// import getAPIDetails from './asyncActions';
 import EventMember from './EventMember';
 import axios from 'axios';
+import { addAPIData } from './actionCreators';
+
+@connect((store) => {
+  return {
+    loaded: store.apiData.loaded,
+    data: store.apiData.data
+  }
+})
 
 class EventTeam extends Component {
-  state = {
-    loaded: false,
-    data: []
-  };
-
   componentDidMount() {
-    let self = this;
-    axios
+    if (!this.props.loaded) {
+      axios
       .get('/api/users')
       .then(response => {
-        self.setState({
-          loaded: true,
-          data: [...response.data]
-        });
+        console.log('async dispatch running');
+        this.props.dispatch(addAPIData(response.data));
       })
-      .catch(err => console.error(err));
+      .catch(err => console.error('axios error', err));
+    }
   }
 
   render() {
-    if (this.state.loaded) {
+    console.log(this.props);
+    if (this.props.loaded) {
       return (
         <div className="eventTeam">
-          {this.state.data.map(person => <EventMember key={person.id} member={person} />)}
+          {this.props.data.map(person => <EventMember key={person.id} member={person} />)}
         </div>
       );
     }

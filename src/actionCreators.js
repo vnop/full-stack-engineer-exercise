@@ -8,6 +8,6 @@ export function addAPIData(apiData) {
   return { type: ADD_API_DATA, payload: apiData };
 }
 
-export function SET_SELECTED_MEMBER(selectedMember) {
+export function setSelectedMember(selectedMember) {
   return { type: SET_SELECTED_MEMBER, payload: selectedMember };
 }
