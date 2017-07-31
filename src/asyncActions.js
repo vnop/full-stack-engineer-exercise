@@ -6,7 +6,6 @@ export default function getAPIDetails() {
     axios
       .get('/api/users')
       .then(response => {
-        console.log('async dispatch running');
         dispatch(addAPIData(response.data));
       })
       .catch(err => console.error('axios error', err));

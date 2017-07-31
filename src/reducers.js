@@ -1,7 +1,15 @@
 import { combineReducers } from 'redux';
 import { SET_SEARCH_NAME, ADD_API_DATA, SET_SELECTED_MEMBER } from './actions';
 
-const searchName = (state = '', action) => {
+const DEFAULT_STATE = {
+  searchName: '',
+  loaded: false,
+  data: [],
+  showAddress: false,
+  showMemberId: null
+};
+
+const searchName = (state = DEFAULT_STATE, action) => {
   switch (action.type) {
     case SET_SEARCH_NAME:
       return action.payload;
@@ -10,20 +18,23 @@ const searchName = (state = '', action) => {
   }
 };
 
-const apiData = (state = { loaded: false, data: [] }, action) => {
+const apiData = (state = DEFAULT_STATE, action) => {
   switch (action.type) {
     case ADD_API_DATA:
       return { ...state, loaded: true, data: action.payload };
-      break;
     default:
       return state;
   }
 };
 
-const selectedMember = (state = { showMember: null }, action) => {
+const selectedMember = (state = DEFAULT_STATE, action) => {
   switch (action.type) {
     case SET_SELECTED_MEMBER:
-      return { ...state, showMember: action.payload };
+      return {
+        ...state,
+        showAddress: action.payload.show,
+        showMemberId: action.payload.id
+      };
     default:
       return state;
   }
