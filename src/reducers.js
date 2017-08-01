@@ -12,7 +12,7 @@ const DEFAULT_STATE = {
 const searchName = (state = DEFAULT_STATE, action) => {
   switch (action.type) {
     case SET_SEARCH_NAME:
-      return action.payload;
+      return { ...state, searchName: action.payload };
     default:
       return state;
   }

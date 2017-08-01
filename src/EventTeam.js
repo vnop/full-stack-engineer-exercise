@@ -9,7 +9,8 @@ import { setSelectedMember } from './actionCreators';
     loaded: store.apiData.loaded,
     data: store.apiData.data,
     showAddress: store.selectedMember.showAddress,
-    showMemberId: store.selectedMember.showMemberId
+    showMemberId: store.selectedMember.showMemberId,
+    searchName: store.searchName.searchName
   }
 })
 
@@ -32,17 +33,36 @@ class EventTeam extends Component {
 
   render() {
     if (this.props.loaded) {
+      let memberList = [];
+      if (this.props.searchName) {
+        memberList = this.props.data.filter(person => {
+          return person.name.toLowerCase().includes(this.props.searchName.toLowerCase());
+        });
+      } else {
+        memberList = this.props.data;
+      }
       return (
         <div className="eventTeam">
-          {this.props.data.map(person => {
+          {memberList.map(person => {
             let address;
+            let selected;
             if (person.id === this.props.showMemberId && this.props.showAddress) {
+              selected = true;
+              let addressString = `
+                  ${person.address.street},
+                  ${person.address.suite},
+                  ${person.address.city},
+                  ${person.address.zipcode}`;
               address = (
                 <div className="memberAddress">
-                  {person.address.street}
+                  <div className="address">
+                    <strong>Address: </strong>
+                  </div>
+                  {addressString}
                 </div>
               );
             } else {
+              selected = false;
               address = null;
             }
             return (
@@ -54,6 +74,7 @@ class EventTeam extends Component {
               member={person}
               selected={this.props.showMemberId}
               showAddress={this.props.showAddress}
+              arrow={selected}
               />
               <div>{address}</div>
               </div>
