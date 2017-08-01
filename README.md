@@ -113,13 +113,20 @@ In the directory where you'd like this repository to live, run the following com
 > $ npm install
 ```
 
-#### Step 3 - Run!
+#### Step 3 - Create and Run!
+Create a mysql database named lenndDB
 Run the development server:
 ```
 > $ npm start
 ```
 
-#### Step 3 - View in browser
+#### Step 4 - Seed
+Seed the database:
+```
+> $ npm run seed
+```
+
+#### Step 5 - View in browser
 Open up your browser to http://localhost:5000/ and voila!
 
 #### Notes

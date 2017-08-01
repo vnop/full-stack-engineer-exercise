@@ -10,7 +10,6 @@ const EventMember = props => {
       <div className="memberGravatar">
         <img src={gravatar} />
       </div>
-
       <div className="memberName">
         <div className="name">
           <strong>
@@ -21,7 +20,6 @@ const EventMember = props => {
           {props.member.email}
         </div>
       </div>
-
       <Member member={props.arrow} memberId={props.member.id} />
     </div>
   );
